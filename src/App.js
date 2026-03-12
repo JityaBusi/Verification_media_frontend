@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import UploadImage from "./components/UploadImage";
+import VerifyHash from "./components/VerifyHash";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-black text-white flex flex-col items-center py-10 px-4">
+      
+      <h1 className="text-4xl md:text-5xl font-bold mb-10 text-center">
+        🔐 AI Media Verification
+      </h1>
+
+      <div className="grid md:grid-cols-2 gap-8 w-full max-w-6xl">
+        <UploadImage />
+        <VerifyHash />
+      </div>
+
     </div>
   );
 }
